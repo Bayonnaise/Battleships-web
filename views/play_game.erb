@@ -1,0 +1,12 @@
+<% @player = GAME.return_player(session[:player1]) %>
+<% @opponent = @opponent = GAME.return_opponent(session[:player1]) %>
+
+<h2><%=@player.name%>, fire your missile!</h2>
+
+<form action="/fire" method="post">
+	Enter target coordinates...<br>
+	<input type='text' size='3' name='coord'>
+	<input type='submit' value="Submit">
+</form>
+
+<%=erb :show_boards %>

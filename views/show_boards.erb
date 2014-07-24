@@ -1,0 +1,59 @@
+<% @player = GAME.return_player(session[:player1]) %>
+<% @opponent = @opponent = GAME.return_opponent(session[:player1]) %>
+<% grid = @player.board.render_display %>
+<% grid2 = @opponent.board.render_display_without_ships %>
+
+<table width="900px" align="center">
+	<td align='center'>
+		<table class='player'>
+			<tr>
+			<th></th>
+			<%(1..10).each do |head|%>
+				<th><%=head%></th>
+			<%end%>
+
+			<%grid.each.with_index(1) do |row, index|%>
+				<tr>
+				<th><%=(index+64).chr%></th>
+				<%row.each do |column|%>
+					<%if column=="X"%>
+						<td class='hit'><%=column%></td>
+					<%elsif column=="O"%>
+						<td class='miss'><%=column%></td>
+					<%elsif column=="S"%>
+						<td class='ship'><%=column%></td>
+					<%else%>
+						<td><%=column%></td>
+					<%end%>
+				<%end%>
+				</tr>
+			<%end%>
+		</table>
+	</td>
+	<td align='center'>
+		<table class='opponent'>
+			<tr>
+			<th></th>
+			<%(1..10).each do |head|%>
+				<th><%=head%></th>
+			<%end%>
+
+			<%grid2.each.with_index(1) do |row, index|%>
+				<tr>
+				<th><%=(index+64).chr%></th>
+				<%row.each do |column|%>
+					<%if column=="X"%>
+						<td class='hit'><%=column%></td>
+					<%elsif column=="O"%>
+						<td class='miss'><%=column%></td>
+					<%elsif column=="S"%>
+						<td class='ship'><%=column%></td>
+					<%else%>
+						<td><%=column%></td>
+					<%end%>
+				<%end%>
+				</tr>
+			<%end%>
+		</table>
+	</td>
+</table>

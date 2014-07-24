@@ -1,0 +1,73 @@
+#new-game {
+	width: 20em;
+	height: 3em;
+	font-size: 80%;
+}
+
+h1 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	font-size: 100px;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+.battleships_logo {
+  text-shadow:0 0 10px #fff,
+    					0 0 20px #fff,
+  						0 0 30px #fff,
+    			    0 0 40px #5440fd,
+    				  0 0 70px #5440fd,
+  						0 0 80px #5440fd,
+  						0 0 100px #5440fd,
+              0 0 150px #5440fd;
+}
+}
+
+table {
+  border: 1px solid black; 
+}
+
+th, td {
+	border: 1px solid black;
+	width: 40px;
+	height: 35px;
+	table-layout: fixed;
+	text-align: center;	
+}
+
+body {
+	text-align: center;
+	background-color: skyblue;
+	background-image: url('/images/sea-water.jpg');
+}
+
+input[type=radio] {
+	width: 10px;
+	height: 10px;
+	background-color: green;
+}
+
+.opponent {
+	background-color: lightcoral;
+}
+
+.player {
+	background-color: skyblue;
+}
+
+.miss {
+	background-color: aliceblue;
+}
+
+.ship {
+	background-color: dimgray;
+	color: white 
+}
+
+.hit {
+	background-color: dimgray;
+	color: red;
+}

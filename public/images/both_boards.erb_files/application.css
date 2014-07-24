@@ -1,0 +1,30 @@
+h1 {
+	color: red;
+	text-align: center;
+}
+
+table {
+   border: 1px solid black;
+   width: 400px;
+   height: 400px;
+   text-align: center;
+   table-layout: fixed;
+   margin: auto;
+   background-color: skyblue;
+}
+
+th, td {
+	border: 1px solid black;
+}
+
+body {
+	text-align: center;
+	background-color: skyblue;
+	background-image: url('/images/sea-water.jpg');
+}
+
+input[type=radio] {
+	width: 10px;
+	height: 10px;
+	background-color: green;
+}

@@ -1,0 +1,10 @@
+<% @player = GAME.return_player(session[:player1]) %>
+<% @opponent = @opponent = GAME.return_opponent(session[:player1]) %>
+
+<% if GAME.has_ships_floating?(@opponent) %>
+	<h2><%=@opponent.name%> wins!</h2>
+<% else %>
+	<h2>You win!</h2>
+<%end%>
+
+<%=erb :show_boards %>

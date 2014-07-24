@@ -1,0 +1,19 @@
+<% @player = GAME.return_player(session[:player1]) %>
+<% @opponent = @opponent = GAME.return_opponent(session[:player1]) %>
+<% grid = @player.board.render_display %>
+<% grid2 = @opponent.board.render_display_without_ships %>
+
+<h2><%=@player.name%>, you have <%=@player.ships_to_deploy.count%> ships left to deploy</h2>
+
+<% ship = @player.ships_to_deploy.last %>
+<form action="/place_ships" method="post">
+	Enter a coordinate and direction for your next ship (length: <%=ship.remaining_hits%>)...<br>
+	<input type='text' size='3' name='coord'>
+	<input type='radio' name='direction' value='horizontal' checked>Horizontal
+	<input type='radio' name='direction' value='vertical'>Vertical
+	<input type='submit' value="Submit">
+</form>
+
+<p>
+
+<%=erb :show_boards %>
