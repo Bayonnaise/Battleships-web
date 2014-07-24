@@ -8,6 +8,7 @@
 <% ship = @player.ships_to_deploy.last %>
 <form action="/place_ships" method="post">
 	Enter a coordinate and direction for your next ship (length: <%=ship.remaining_hits%>)...<br>
+	<p>
 	<input type='text' size='3' name='coord'>
 	<input type='radio' name='direction' value='horizontal' checked>Horizontal
 	<input type='radio' name='direction' value='vertical'>Vertical

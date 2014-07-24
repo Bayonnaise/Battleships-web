@@ -5,6 +5,7 @@
 }
 
 h1 {
+	color: black;
 	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 	font-size: 100px;
 	margin: 0px;
@@ -12,6 +13,9 @@ h1 {
 
 h2 {
 	font-size: 30px;
+	color: white;
+	text-shadow: 2px 2px black;
+	margin: 10px;
 }
 
 .battleships_logo {
@@ -36,9 +40,13 @@ th, td {
 	height: 35px;
 	table-layout: fixed;
 	text-align: center;	
+	color: black;
+	text-shadow: none;
 }
 
 body {
+	color: white;
+	text-shadow: 1px 1px black;
 	text-align: center;
 	background-color: skyblue;
 	background-image: url('/images/sea-water.jpg');

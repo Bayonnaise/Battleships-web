@@ -8,6 +8,7 @@ require_relative 'water'
 class Game
 	def initialize
 		@players = []
+		@turn = true
 	end
 
 	attr_reader :players
