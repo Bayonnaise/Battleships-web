@@ -13,3 +13,5 @@ Status
 - Playing the game itself is implemented in a basic way, but not working as intended yet.
 - The game knows when one player is victorious.
 - Next step would be to fix the sessions and polish off the web interface, but really I'd like to start again from scratch with the knowledge I have today.
+
+[View the current build on Heroku](http://battleships-web-v1.herokuapp.com/)
